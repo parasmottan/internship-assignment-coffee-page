@@ -1,0 +1,755 @@
+@font-face {
+  font-family: Neuehas;
+  src: url(NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: neureg ;
+  src: url(NeueMachina-Regular.otf);
+}
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+*::selection {
+
+  color: #C1C0B6;
+  background-color: #3F3B37;
+
+}
+
+html,
+body {
+
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* background-color: #888; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Sub-Main {
+  /* background-color: #3F3B37; */
+  height: 97%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftdiv {
+  /* transform: translateX(-100%); */
+  /* display: none; */
+  height: 96%;
+  padding-left: 4vw;
+  width: 0; /* Initially hidden */
+  opacity: 0;
+  /* background-color: #f3f3f3; */
+  /* margin-right: 2vw; */
+  overflow: hidden; 
+  transition: width 1.5s ease-in-out;
+}
+
+.rightdiv {
+ transform: scale(0);
+  /* background-color: antiquewhite; */
+  height: 96%;
+  width: 100%; /* Initially full width */
+  border-radius: 50px;
+  transition: width 1.5s ease-in-out;
+}
+
+.rightdiv img {
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* Keyframes for left div animation to expand */
+@keyframes expandLeftDivFull {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%; /* Full width initially */
+  }
+}
+
+/* Keyframes for left div animation to shrink */
+@keyframes shrinkLeftDiv {
+  from {
+    width: 100%; /* Full width */
+  }
+  to {
+    width: 55%; /* Final width */
+  }
+}
+
+/* Keyframes for right div animation to shrink */
+@keyframes shrinkRightDiv {
+  from {
+    width: 100%; /* Full width */
+  }
+  to {
+    width: 50%; /* Final width */
+  }
+}
+
+
+
+
+nav {
+  
+  margin-left: 0vw;
+  position: relative;
+  padding-top: 3vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 108%;
+  height: 10vh;
+  font-family: Neuehas;
+  gap: 0vw;
+}
+
+
+nav img {
+  display: none;
+  height: 4vw;
+  /* margin-left: -3vw; */
+
+}
+
+.imgdiv{
+  
+  z-index: 999;
+  position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+height:10vw;
+width: 10vw;
+/* background-color: #C1C0B6; */
+
+}
+
+.imgdivload img{
+  height: 4vw;
+  transform: scale(0);
+  transition: transform 1.5s ease-in-out;
+}
+.imgdivload {
+  transform: scale(0); /* Start at scale 0 */
+  background-color: #fff; /* Initially transparent */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+  z-index: 99;
+  /* transform: rotateY(180deg); */
+  pointer-events: none;
+  transition: transform 1.5s ease-in-out, background-color 1.5s ease-in-out; /* Add background-color transition */
+}
+
+
+nav button {
+  width: 9vw;
+  height: 2.8vw;
+  border-radius: 50px;
+  font-size: 1vw;
+  font-weight: 600;
+  background-color: transparent;
+  border: 0.7px solid rgb(53, 114, 53);
+  color: rgb(54, 173, 54);
+}
+
+nav p {
+  color: rgba(0, 0, 0, 0.459);
+  font-weight: 100;
+  position: relative;
+transform: translateX(100%);
+  /* left: -1vw; */
+  white-space: nowrap;
+}
+
+
+.paragraphdv{
+margin-right: -8vw;
+  overflow: hidden;
+  width: 25%;
+}
+
+
+
+.star {
+  
+  font-size: 1.4vw;
+  text-transform: uppercase;
+  font-weight: bolder;
+  transform: translateX(-200%);
+  transition: transform 1.5s ease-in-out,
+}
+
+.coffee {
+  font-size: 1.2vw;
+  letter-spacing: 0.1vw;
+  margin-top: -.2vw;
+  transform: translateX(-200%);
+  transition: transform 1.5s ease-in-out,
+}
+.logowords {
+  overflow: hidden;
+  margin-left: -23.8vw;
+}
+
+
+
+
+.headingAndPara {
+  width: 100%;
+  position: relative;
+  top: 10%;
+  left: -4vw;
+}
+
+.headingAndPara h1 {
+  font-family: Neuehas;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.headingAndPara h3 {
+  font-family: Neuehas;
+  font-size: 1vw;
+  text-align: center;
+  line-height: 2.2vw;
+  color: rgba(0, 0, 0, 0.525);
+  letter-spacing: 1px;
+
+}
+
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 13%;
+  left: -3.8vw;
+  /* background-color: #3F3B37; */
+  width: 100%;
+}
+
+.form-div form {
+  width: 60%;
+  display: flex;
+
+  flex-direction: column;
+  gap: 1vw;
+  transition: 'transform 1.5s ease-in-out, opacity .5 ease-in-out';
+
+}
+
+
+.form-div form input {
+  /* font-family: Neuehas; */
+  font-weight: 600;
+  opacity: 70%;
+  padding: 1vw 1vw;
+  height: 3.4vw;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.237);
+}
+
+.check {
+  display: flex;
+  gap: 1vw;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+.custom-checkbox {
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  /* cursor: pointer; */
+  user-select: none;
+  opacity: 70%;
+  padding-top: 0.2vw;
+  padding-left: 2.4vw;
+  font-size: 1vw;
+  font-family: Neuehas;
+}
+
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 27px;
+  width: 27px;
+
+  border: 0.1px solid rgba(0, 0, 0, 0.195);
+  border-radius: 0px;
+  transition: background-color 0.2s;
+}
+
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+}
+
+
+.custom-checkbox input:checked+.checkmark:after {
+  display: block;
+
+}
+
+
+.custom-checkbox .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 7px;
+  height: 12px;
+  border: solid rgb(75, 154, 62);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+
+}
+
+#mobileimage{
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  border-radius: 10px;
+}
+
+
+.check {
+  margin-top: 1vw;
+}
+
+.btn-andload{
+  /* width: 100%; */
+  position: relative;
+}
+
+
+.btn {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 3.5vw;
+  border: none;
+  background-color: #888888b7; 
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: #fff;
+  /* cursor: not-allowed;  */
+  margin-top: 1vw;
+  transition: background-color 0.3s ease;
+  /* pointer-events: none; */
+}
+
+
+.btn.active {
+  background-color: #007bff; 
+  cursor: pointer; 
+  pointer-events: auto; 
+  transform: scale(0.95);
+}
+      /* Button text transition */
+
+
+    /* Loader style */
+    .loader {
+       position: absolute;
+         top: 3.7vh;
+        left: 13vw;  
+transition: ease 2s;
+        width: 30px; /* Width of the loader */
+        height: 30px; /* Height of the loader */
+        border: 4px solid rgba(255, 255, 255, 0.3); /* Light border for the loader */
+        border-top: 4px solid rgb(255, 255, 255); /* White top border for loader effect */
+        border-radius: 50%; /* Circular loader */
+        animation: spin 1s linear infinite; /* Spinning animation */
+        opacity: 0; /* Initially hidden */
+    pointer-events: none;
+    }
+
+    /* Spin animation for loader */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Show the loader */
+    /* .btn.loading .loader {
+        left: 10px; /* Position loader in the button */
+
+
+    /* Move text off screen */
+    .btn.loading .btn-text {
+        transform: translateX(100%); /* Move text to the right */
+        opacity: 1; /* Fade out text */
+    }
+
+.two-atag {
+  left: -4vw;
+  position: relative;
+  top: 20%;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+}
+
+.two-atag a {
+  text-decoration: none;
+  color: #4E892C;
+  font-family: Neuehas;
+  font-size: 1vw;
+
+
+}
+
+
+footer {
+  margin-top: 0.4vw;
+position: relative;
+top: 33%;
+left: -4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: neureg ;
+  gap: 0.3vw;
+}
+
+
+footer p{
+font-size: 0.7vw;
+opacity: 70%;
+letter-spacing: 1px;
+}
+
+
+input {
+  transition: ease 0.3s;
+  border: none; /* Remove border */
+  outline: none; /* Remove default focus outline */
+  box-shadow: none; /* Remove any box-shadow */
+}
+
+
+.buttondiv {
+  position: relative; /* Position the container relative to its content */
+  display: inline-block;
+transition: ease-in-out 1s;
+}
+
+.enroll-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hover-box {
+  transition: ease-in-out 1s;
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px; /* Adjust this based on where you want the box to appear */
+  left: -7vw;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure it appears on top */
+  white-space: nowrap;
+}
+
+/* Make the box appear when hovering over the button */
+.buttondiv:hover .hover-box {
+  display: block;
+}
+
+.hover-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hover-box li {
+  margin: 5px 0;
+}
+
+
+.name:hover{
+
+border: 0.7px solid green;
+box-shadow: 0 1px 3px rgba(112, 243, 12, 0.775); /* Add shadow around input */
+
+}
+
+.pass:hover{
+
+  border: 0.7px solid green;
+  box-shadow: 0 1px 3px rgba(112, 243, 12, 0.775); /* Add shadow around input */
+  
+  }
+
+
+
+
+  @media (max-width:600px){
+
+    .Sub-Main {
+      flex-direction: column;
+      height: 97%;
+      width: 90%;
+      gap: 3vw;
+      position: relative;
+  }
+
+  /* .rightdiv img {
+    border-radius: 50px;
+    height: 33%;
+    width: 136%;
+    object-fit: cover;
+    position: absolute;
+    top: -72vw;
+    left: -6vw;
+} */
+
+.rightdiv{
+  display: none;
+}
+  nav {
+    margin-left: -34vw;
+    /* position: relative; */
+    padding-top: 0vw;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 257%;
+    height: 10vh;
+    font-family: Neuehas;
+    /* gap: 7vw; */
+    margin-top: -5VW;
+}
+
+.paragraphdv {
+  margin-right: -18vw;
+  overflow: hidden;
+  width: 25%;
+  margin-left: -13vw;
+}
+
+nav p {
+  color: rgba(0, 0, 0, 0.459);
+  font-weight: 100;
+  position: relative;
+  transform: translateX(100%);
+  /* left: -1vw; */
+  white-space: nowrap;
+  font-size: 2.3vw;
+}
+
+.leftdiv {
+
+  overflow:visible;
+ 
+}
+
+
+.star {
+  font-size: 3.4vw;
+ 
+}
+
+
+.coffee {
+  font-size: 3.2vw;
+}
+
+nav button {
+  width: 19vw;
+  height: 6.8vw;
+
+  font-size: 2vw;
+ 
+}
+
+nav img {
+  display: block;
+  height: 13vw;
+  margin-left: -9vw;
+}
+
+.logowords {
+  overflow: hidden;
+  margin-left: -17.8vw;
+}
+
+.headingAndPara h1 {
+  font-family: Neuehas;
+  font-size: 9vw;
+  white-space: nowrap;
+  text-align: center;
+  margin-left: -5.5vw;
+}
+
+.headingAndPara h3 {
+  font-family: Neuehas;
+  font-size: 3vw;
+  text-align: center;
+  line-height: 3.2vw;
+  color: rgba(0, 0, 0, 0.525);
+  letter-spacing: 1px;
+}
+
+
+
+.headingAndPara {
+  width: 100%;
+  position: relative;
+  top: 4%;
+  left: -4vw;
+}
+
+
+.form-div form {
+  margin-top: 31vw;
+  width: 128%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  transition: 'transform 1.5s ease-in-out, opacity .5 ease-in-out';
+}
+
+
+.form-div form input {
+  /* font-family: Neuehas; */
+  font-weight: 100;
+  opacity: 70%;
+  padding: 1vw 3vw;
+  height: 8.4vw;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0, 0, 0, 0.237);
+}
+
+.btn{
+  height:8.5vw;
+}
+
+.custom-checkbox .checkmark{
+  height: 16px;
+  width: 16px;
+}
+
+.custom-checkbox{
+  font-size: 3vw;
+  padding-left: 6.4vw;
+}
+
+.two-atag a{
+  font-size: 2vw;
+}
+
+.two-atag{
+  left: 0vw;
+  position: relative;
+  top: -2%;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+}
+
+.check{
+  display: inline;
+}
+
+#mobileimage{
+  display: inline;
+  height: 44vw;
+  border-radius: 50px;
+  position: relative;
+  top: 13vw;
+  left: -12vw;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -4%;
+  left: -1vw;
+  /* background-color: #3F3B37; */
+  width: 100%;
+}
+
+
+.loader{
+  display: none;
+}
+
+footer {
+  margin-top: 0.4vw;
+  position: relative;
+  top: 11%;
+  left: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: neureg;
+  gap: 0.3vw;
+}
+footer p {
+  font-size: 1.7vw;
+  opacity: 70%;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.imgdivload{
+  display: none;
+}
+
+}
+
+
+ 
