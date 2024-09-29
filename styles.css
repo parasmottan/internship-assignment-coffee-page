@@ -1,12 +1,13 @@
 @font-face {
   font-family: Neuehas;
-  src: url(NeueHaasDisplayMediu.ttf);
+  src: url(assets/NeueHaasDisplayMediu.ttf);
 }
 
 @font-face {
   font-family: neureg ;
-  src: url(NeueMachina-Regular.otf);
+  src: url(assets/NeueMachina-Regular.otf);
 }
+
 
 
 * {
